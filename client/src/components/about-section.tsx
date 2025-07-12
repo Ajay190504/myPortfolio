@@ -4,23 +4,23 @@ import { Card, CardContent } from "@/components/ui/card";
 const educationTimeline = [
   {
     degree: "B.Tech CSE",
-    institution: "NBN Sinhgad College",
+    institution: "N B Navale Sinhgad College of Engineering, Solapur",
     period: "2022–2026",
-    grade: "CGPA: 9.11",
+    grade: "CGPA: 9.11 (Till 4th Sem)",
     color: "blue",
   },
   {
     degree: "HSC",
-    institution: "Barshi",
+    institution: "Maharashtra Secondary and Higher Secondary Vidyalaya, Barshi",
     period: "2022",
     grade: "66.33%",
     color: "purple",
   },
   {
     degree: "SSC",
-    institution: "Barshi",
+    institution: "Sheth Agarchand Kunkulol Highschool, Barshi",
     period: "2020",
-    grade: "92.6%",
+    grade: "92.60%",
     color: "amber",
   },
 ];
