@@ -1,0 +1,113 @@
+Prompt for Animated Portfolio Website Development (Text Format)
+Title: "Ajay Waghmare – Full Stack & DevOps Developer Portfolio"
+
+Sections:
+Homepage
+
+Animated intro with name: Ajay Dattatraya Waghmare
+
+Role: Software Developer | MERN Stack | DevOps | AWS
+
+Typing animation with tech: "React | Node | DevOps | MERN | AWS"
+
+Button: Download Resume (PDF)
+
+Animated background (particles or waves)
+
+About
+
+Short bio:
+
+"Aspiring software developer with hands-on experience in fullstack development using React.js and Node.js. Skilled in Python, Java, and building interactive web apps. Passionate about real-world projects and collaborative work."
+
+Education Timeline:
+
+B.Tech CSE – 9.11 CGPA – NBN Sinhgad College (2022–2026)
+
+HSC – 66.33% – Barshi (2022)
+
+SSC – 92.6% – Barshi (2020)
+
+Skills
+
+Programming: Java, Python, SQL, HTML, CSS, JS
+
+Frameworks: React.js, Node.js, Express.js, REST API
+
+Tools: Git, GitHub, Jenkins, AWS
+
+Databases: MySQL, MongoDB
+
+Soft Skills: Time Management, Teamwork, Leadership
+
+Animation: Circular or progress bar animations
+
+Experience
+
+MSSQUARE GLOBAL – DevOps Intern (Jun–Jul 2025)
+
+Used CI/CD, Git, Jenkins, AWS
+
+CodTech IT Solutions – Web Dev Intern (May–Jun 2025)
+
+Built full-stack apps with MERN
+
+Projects
+
+SecureVote – Blockchain-based voting app (React, Node, Truffle, MetaMask)
+
+Movie-Search-App – Uses OMDb API to fetch real-time data
+
+FocusFlow – Chrome Extension for productivity & goal tracking
+
+Each with GitHub links and hover animation
+
+Achievements
+
+Participated in hackathons, coding contests
+
+Workshops at national level
+
+Runner-up in Kabaddi (Umang 2K22)
+
+Active in interdepartmental sports
+
+Certifications
+
+Python, Java, JavaScript by Infosys Springboard
+
+Soft Skills – NPTEL
+
+DevOps and AWS – MSSQUARE Global
+
+Show certificate tiles with animation or logos
+
+Contact
+
+Email: ajaywaghmare190504@gmail.com
+
+GitHub: github.com/Ajay190504
+
+LinkedIn: linkedin.com/in/ajay-waghmare-79a53933a
+
+Contact Form: Name, Email, Message with success animation
+
+Footer
+
+Quick links to all sections
+
+Social media icons (GitHub, LinkedIn, Email)
+
+Light/Dark mode toggle (optional)
+
+🔄 Animations to include:
+Framer Motion for scroll/fade/slide animations
+
+tsParticles or animated SVG background
+
+Hover effects on projects and skill cards
+
+Smooth scroll navigation
+
+Scroll-reveal effects
+
