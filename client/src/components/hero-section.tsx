@@ -4,25 +4,22 @@ import { ChevronDown, Download } from "lucide-react";
 import TypingAnimation from "@/components/typing-animation";
 
 export default function HeroSection() {
-  const handleResumeDownload = async () => {
-    try {
-      const response = await fetch("/api/resume");
-      if (response.ok) {
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "Ajay_Waghmare_Resume.pdf";
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-      } else {
-        console.error("Failed to download resume");
-      }
-    } catch (error) {
-      console.error("Error downloading resume:", error);
-    }
+  const handleResumeDownload = () => {
+    // For static deployment, the resume should be in the public folder
+    // You can either:
+    // 1. Place the resume in client/public/ and use a direct link
+    // 2. Use a cloud storage service like AWS S3, Google Drive, etc.
+    
+    // Option 1: Direct link to resume in public folder
+    const resumeUrl = "/Ajay_Waghmare_Resume.pdf";
+    
+    // Create a temporary link and trigger download
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "Ajay_Waghmare_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleViewProjects = () => {

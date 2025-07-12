@@ -7,8 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Github, Linkedin, Send, CheckCircle } from "lucide-react";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 interface ContactFormData {
   name: string;
@@ -47,34 +45,48 @@ export default function ContactSection() {
     message: "",
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      setShowSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // For static deployment, you can use Formspree, Netlify Forms, or similar
+      // This is a placeholder - replace with your actual form service
+      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
-      setTimeout(() => setShowSuccess(false), 5000);
-    },
-    onError: () => {
+
+      if (response.ok) {
+        setShowSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setTimeout(() => setShowSuccess(false), 5000);
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
       toast({
         title: "Error sending message",
-        description: "Please try again later.",
+        description: "Please try again later or contact me directly via email.",
         variant: "destructive",
       });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    contactMutation.mutate(formData);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -197,10 +209,10 @@ export default function ContactSection() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   type="submit"
-                  disabled={contactMutation.isPending}
+                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-blue-500 to-emerald-500 hover:from-blue-600 hover:to-emerald-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  {contactMutation.isPending ? (
+                  {isSubmitting ? (
                     <div className="flex items-center justify-center">
                       <motion.div
                         animate={{ rotate: 360 }}
