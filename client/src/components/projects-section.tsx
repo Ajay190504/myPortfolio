@@ -12,7 +12,7 @@ const projects = [
     color: "blue",
     technologies: ["React", "Node.js", "Blockchain"],
     githubUrl: "https://github.com/Ajay190504/SecureVote",
-    liveUrl: "#",
+    liveUrl: "https://github.com/Ajay190504/SecureVote",
   },
   {
     title: "Movie Search App",
@@ -21,7 +21,7 @@ const projects = [
     color: "emerald",
     technologies: ["React", "API", "JavaScript"],
     githubUrl: "https://github.com/Ajay190504/Movie-Search-App",
-    liveUrl: "#",
+    liveUrl: "https://github.com/Ajay190504/Movie-Search-App",
   },
   {
     title: "FocusFlow",
@@ -30,7 +30,7 @@ const projects = [
     color: "purple",
     technologies: ["Chrome Extension", "JavaScript", "Productivity"],
     githubUrl: "https://github.com/Ajay190504/FocusFlow",
-    liveUrl: "#",
+    liveUrl: "https://github.com/Ajay190504/FocusFlow",
   },
 ];
 
@@ -101,22 +101,26 @@ export default function ProjectsSection() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <Button
-                      variant="link"
-                      className="text-blue-400 hover:text-blue-300 p-0"
-                      onClick={() => window.open(project.githubUrl, "_blank")}
-                    >
-                      <Github className="mr-1 h-4 w-4" />
-                      GitHub
-                    </Button>
-                    <Button
-                      variant="link"
-                      className="text-emerald-400 hover:text-emerald-300 p-0"
-                      onClick={() => window.open(project.liveUrl, "_blank")}
-                    >
-                      <ExternalLink className="mr-1 h-4 w-4" />
-                      Live Demo
-                    </Button>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        variant="link"
+                        className="text-blue-400 hover:text-blue-300 p-0 transition-all duration-200"
+                        onClick={() => window.open(project.githubUrl, "_blank")}
+                      >
+                        <Github className="mr-1 h-4 w-4" />
+                        GitHub
+                      </Button>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        variant="link"
+                        className="text-emerald-400 hover:text-emerald-300 p-0 transition-all duration-200"
+                        onClick={() => window.open(project.liveUrl, "_blank")}
+                      >
+                        <ExternalLink className="mr-1 h-4 w-4" />
+                        Repository
+                      </Button>
+                    </motion.div>
                   </div>
                 </CardContent>
               </Card>

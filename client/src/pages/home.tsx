@@ -9,6 +9,7 @@ import ProjectsSection from "@/components/projects-section";
 import AchievementsSection from "@/components/achievements-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import ScrollToTop from "@/components/scroll-to-top";
 
 export default function Home() {
   useEffect(() => {
@@ -39,6 +40,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
