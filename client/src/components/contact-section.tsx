@@ -55,7 +55,7 @@ export default function ContactSection() {
     try {
       // For static deployment, you can use Formspree, Netlify Forms, or similar
       // This is a placeholder - replace with your actual form service
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
