@@ -31,20 +31,21 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
-      <div className="text-center z-10 max-w-4xl mx-auto px-4">
+      <div className="text-center z-10 max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2 text-gradient break-words leading-normal pb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Ajay Dattatraya Waghmare
           </motion.h1>
+          <div className="h-6"></div>
 
           <motion.div
             className="text-xl md:text-2xl lg:text-3xl font-semibold mb-8 text-slate-300"

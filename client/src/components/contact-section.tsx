@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "ajaywaghmare190504@gmail.com",
-    href: "mailto:ajaywaghmare190504@gmail.com",
+    value: "ajaywaghmare782@gmail.com",
+    href: "mailto:ajaywaghmare782@gmail.com",
     color: "blue",
   },
   {
